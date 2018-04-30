@@ -11,9 +11,13 @@ type Book {
     description: String
 }
 
+type Message {
+    message:String
+    book:Book
+}
+
 type Subscription{
-    newBookAdded: Book
-    bookDeleted : Book
+    notifyUsers:  Message
 }
 
 type Query {
@@ -29,9 +33,9 @@ input BookInput {
 }
 
 type Mutation {
-    addBook(input : BookInput)  : [Book]
+    addBook(input : BookInput)  : Book
     updateBook(input : BookInput)  : Book
-    deleteBook(id: Int!) : [Book]
+    deleteBook(id: Int!) : Book
 }
 
 schema {
