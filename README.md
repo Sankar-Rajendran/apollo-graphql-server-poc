@@ -1,9 +1,11 @@
 # apollo-graphql-server-poc
 apollo-graphql-server-poc
 
-This projects has very demo on CRUD operations using Graphql.
+This projects contains simple CRUD operations and basic subscriptions using Graphql.
+
 
 To start 
+
 npm install
 
 npm run dev
