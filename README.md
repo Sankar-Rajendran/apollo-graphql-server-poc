@@ -17,50 +17,62 @@ http://localhost:4000/graphiql open it in your browser
 
 Use below queries and mutation for testing either in Graphiql or Insomnia.
 
-Get All books:
+**To Get All books:**
 
+```
 {
-	allBooks{
+	allBooks {  
 	title,author,id,description
-}}
+	}
+ }
+ ```
 
-Add a Book:
+**To Add a Book:**
 
-mutation{
-	addBook(input:{id:1,author:"author 1",title:"title 1",description:"description 2"}){
+```
+mutation {
+	addBook(input:{id:1,author:"author 1",title:"title 1",description:"description 2"}) {
 		id,
 		title,
 		author,
 		description
 	}
 }
+```
 
-Get a book by Id:
+**To Get a book by Id:**
 
+```
 {
-	book(id:1){
-id,title
+    book(id:1) {
+        id,title
+    }
 }
-}
+```
 
-Update a book:
+**Update a book:**
 
-mutation{
+```
+mutation {
 	updateBook(input:{id:1,author:"author changed"}){
 		id,title,author,description
 	}
 }
+```
 
-Delete a book:
+**To Delete a book:**
 
+```
 mutation{
 	deleteBook(id:1){
 		id,title,author,description
 	}
 }
+```
 
-For Subscription:
+**For Subscription:**
 
+```
 subscription {
   notifyUsers {    
     message
@@ -72,6 +84,7 @@ subscription {
     }
   }
 }
+```
 
 
 
